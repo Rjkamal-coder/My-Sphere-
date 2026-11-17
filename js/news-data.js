@@ -8,11 +8,11 @@ window.NEWS_ARTICLES = [
   
 {
   id: "global-investors-cut-technology-stock-exposure",
-  category: "markets",
+  category: "forex",
   title: "Global Investors Reduce Technology Stock Investments Amid Growing AI Spending Concerns",
   excerpt: "A Bank of America survey reveals that global investors have sharply reduced their exposure to technology stocks, marking the biggest monthly decline in nearly two decades as concerns about AI investment grow.",
   image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=85",
-  author: "Mohammed Rafique",
+  author: "My sphere",
   date: "2026-11-18",
   featured: true,
   breaking: true,
