@@ -14,7 +14,7 @@ window.NEWS_ARTICLES = [
   author: "Business News Desk",
   date: "2026-11-17",
   featured: true,
-  breaking: false,
+  breaking: true,
   content: `Artificial intelligence investment is facing growing scrutiny as business leaders question whether the enormous spending on AI technology is generating sufficient financial returns.
 
 Robin Li, chairman and CEO of Chinese technology company Baidu, warned on Tuesday, November 17, that concerns about an artificial intelligence bubble could become reality if companies fail to translate their heavy investments into higher profits.
