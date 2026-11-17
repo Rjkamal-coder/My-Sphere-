@@ -6,6 +6,52 @@
 */
 window.NEWS_ARTICLES = [
   {
+  id: "baidu-ai-investment-profit-warning",
+  category: "business",
+  title: "Baidu CEO Warns AI Investment Could Become a Bubble Without Real Business Profits",
+  excerpt: "Baidu CEO Robin Li warns that massive artificial intelligence investments could fuel a market bubble unless companies turn their spending into meaningful revenue and profits.",
+  image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=85",
+  author: "Business News Desk",
+  date: "2026-11-17",
+  featured: true,
+  breaking: false,
+  content: `Artificial intelligence investment is facing growing scrutiny as business leaders question whether the enormous spending on AI technology is generating sufficient financial returns.
+
+Robin Li, chairman and CEO of Chinese technology company Baidu, warned on Tuesday, November 17, that concerns about an artificial intelligence bubble could become reality if companies fail to translate their heavy investments into higher profits.
+
+Speaking at the Asia-Pacific Economic Cooperation (APEC) CEO Summit in Shenzhen, China, Li said that AI spending has not yet generated significant revenue or profit improvements for most businesses.
+
+Li explained that the AI industry consists of four major layers: semiconductor chips, cloud infrastructure, large language models and applications. While competition is currently intense at the infrastructure and technology foundation levels, he believes that the ultimate commercial value must come from the application layer.
+
+In other words, developing powerful AI models and building expensive data centres will not necessarily guarantee business success. Companies must demonstrate that their technology can solve real problems, attract customers and generate sustainable income.
+
+Baidu has also introduced a platform called "Token Exchange", which connects AI token providers directly with enterprise and individual customers. According to Li, the initiative is intended to help address computing resource shortages.
+
+Despite raising concerns about profitability, Li remains optimistic about artificial intelligence, describing it as an inevitable technological trend.
+
+**Why This Matters for Investors**
+
+The warning highlights an important issue for technology investors: high investment and rapid technological development do not automatically translate into profitable businesses.
+
+Investors may increasingly examine:
+- AI companies' actual revenue and profit growth.
+- The cost of building and operating AI infrastructure.
+- Demand for commercial AI applications.
+- Whether technology companies can maintain competitive advantages.
+- Whether current market valuations are supported by business performance.
+
+**Market Outlook**
+
+The AI industry continues to attract significant investment, but the next stage of competition may depend less on who spends the most and more on who can turn artificial intelligence into profitable products and services.
+
+For investors, this distinction could become increasingly important when evaluating technology stocks and the wider AI market.
+
+Source: Reuters, November 17, 2026.
+Original report: https://www.reuters.com/business/media-telecom/baidu-ceo-says-ai-investment-must-deliver-profits-avoid-bubble-2026-11-17/
+
+Disclaimer: This article is for informational and educational purposes only. It does not constitute financial or investment advice.`
+},
+  {
     id: "sample-global-markets-outlook",
     category: "markets",
     title: "Global Markets at a Turning Point: Investors Weigh Growth, Inflation and Interest Rates",
