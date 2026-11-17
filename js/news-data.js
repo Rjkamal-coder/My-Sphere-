@@ -5,6 +5,60 @@
   Add future articles as objects inside the NEWS_ARTICLES array.
 */
 window.NEWS_ARTICLES = [
+  
+{
+  id: "global-investors-cut-technology-stock-exposure",
+  category: "markets",
+  title: "Global Investors Reduce Technology Stock Investments Amid Growing AI Spending Concerns",
+  excerpt: "A Bank of America survey reveals that global investors have sharply reduced their exposure to technology stocks, marking the biggest monthly decline in nearly two decades as concerns about AI investment grow.",
+  image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=85",
+  author: "Mohammed Rafique",
+  date: "2026-11-17",
+  featured: false,
+  breaking: false,
+  content: `Global investors are becoming increasingly cautious about technology stocks as concerns grow over the enormous amount of money being invested in artificial intelligence and data-centre infrastructure.
+
+According to a Bank of America monthly fund manager survey reported by Reuters on November 17, investors have significantly reduced their exposure to technology shares. Their net overweight allocation to technology stocks dropped to 12%, compared with 37% in the previous month.
+
+The survey described this as the largest monthly reduction in technology allocations since June 2006.
+
+**Why Are Investors Becoming Cautious?**
+
+One major concern is that technology companies may be spending too much money on artificial intelligence infrastructure without generating enough financial returns.
+
+The survey found that 38% of participating investors believe companies are overinvesting. Furthermore, 52% expect at least one major AI cloud-computing company to announce a reduction in capital spending within the next six months.
+
+Investors also identified a possible AI market bubble as their biggest potential risk to financial markets.
+
+**Investors Are Moving Towards Bonds**
+
+The survey also showed that investors are gradually moving towards bonds as they reconsider their investment strategies.
+
+Despite concerns about technology stocks, most surveyed investors were not predicting a global recession. Only 3% expected a recession, while cash holdings among investors had fallen to their lowest level in three months.
+
+**What Could Happen Next?**
+
+The results suggest that investors may become more selective when choosing technology companies.
+
+Businesses that can demonstrate strong earnings, sustainable revenue and real returns from AI investments could remain attractive. However, companies that depend heavily on continuous borrowing and expensive infrastructure may face greater financial pressure.
+
+For the wider stock market, the coming months could be important in determining whether artificial intelligence investment continues at its current pace or enters a period of adjustment.
+
+**Key Survey Findings**
+
+- 12%: Investors' net overweight allocation to technology stocks, down from 37%.
+- 38%: Investors who believe companies are overinvesting.
+- 52%: Investors expecting an AI hyperscaler to reduce capital expenditure within six months.
+- 169: Investors participated in the survey.
+- $461 billion: Total assets managed by the surveyed investors.
+
+Source: Reuters, November 17, 2026. Based on Bank of America's monthly fund manager survey.
+
+Original report: https://www.reuters.com/business/global-markets-bofa-survey-2026-11-17/
+
+Disclaimer: This article is for informational and educational purposes only. It is not financial or investment advice.`
+},
+  
   {
   id: "baidu-ai-investment-profit-warning",
   category: "business",
