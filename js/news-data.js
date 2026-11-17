@@ -13,9 +13,9 @@ window.NEWS_ARTICLES = [
   excerpt: "A Bank of America survey reveals that global investors have sharply reduced their exposure to technology stocks, marking the biggest monthly decline in nearly two decades as concerns about AI investment grow.",
   image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=85",
   author: "Mohammed Rafique",
-  date: "2026-11-17",
-  featured: false,
-  breaking: false,
+  date: "2026-11-18",
+  featured: true,
+  breaking: true,
   content: `Global investors are becoming increasingly cautious about technology stocks as concerns grow over the enormous amount of money being invested in artificial intelligence and data-centre infrastructure.
 
 According to a Bank of America monthly fund manager survey reported by Reuters on November 17, investors have significantly reduced their exposure to technology shares. Their net overweight allocation to technology stocks dropped to 12%, compared with 37% in the previous month.
