@@ -1,14 +1,20 @@
-const CACHE_NAME = "my-daily-routine-shell-v2";
+const CACHE_NAME = "growtica-shell-v4";
 const APP_SHELL = [
   "./",
   "./index.html",
+  "./register.html",
+  "./forgot-password.html",
+  "./privacy.html",
+  "./terms.html",
   "./manifest.webmanifest",
   "./css/themes.css",
   "./css/style.css",
   "./css/dashboard.css",
   "./css/pages.css",
   "./css/responsive.css",
+  "./css/public.css",
   "./css/news.css",
+  "./js/public.js",
   "./js/pwa.js",
   "./js/utils.js",
   "./js/auth.js",
