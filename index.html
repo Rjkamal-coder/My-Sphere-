@@ -2,23 +2,90 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101827"><meta name="description" content="Manage your daily routines, prayers, expenses, trading journal and personal progress."><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="assets/images/app-icon.svg" type="image/svg+xml"><title>My Daily Routine</title>
+<meta name="theme-color" content="#123b67"><meta name="description" content="Growtica brings daily routines, prayer tracking, expenses, trading journals, market news, calendar tasks and analytics into one personal workspace."><meta name="robots" content="index,follow"><meta property="og:title" content="Growtica — Your day. Your goals. Your growth."><meta property="og:description" content="A practical digital workspace for everyday planning, personal tracking and market stories."><meta property="og:type" content="website"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="assets/images/app-icon.svg" type="image/svg+xml"><title>Growtica — Your day. Your goals. Your growth.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/news.css"><link rel="stylesheet" href="css/themes.css"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/news.css"><link rel="stylesheet" href="css/themes.css"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/public.css">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/supabase-config.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Growtica","description":"A personal workspace for routines, prayer tracking, expenses, trading journals, market news and tasks."}</script>
 </head>
 <body>
-<div id="auth-screen" class="auth-screen">
-  <div class="auth-card"><div class="brand-mark">✦</div><h1>My Daily Routine</h1><p class="muted">Your day, your progress, in one place.</p>
-  <form id="login-form"><label>Email address<input type="email" id="login-email" required autocomplete="email"></label><label>Password<input type="password" id="login-password" required autocomplete="current-password"></label><button class="btn primary full">Sign in</button></form>
-  <p class="auth-links"><a href="register.html">Create account</a><a href="forgot-password.html">Forgot password?</a></p>
-  <p id="auth-message" class="message"></p></div>
+<!-- Public Growtica homepage; account features remain behind Supabase authentication. -->
+<div id="public-home">
+  <header class="public-header">
+    <button class="public-menu-toggle" id="public-menu-btn" type="button" aria-expanded="false" aria-controls="public-drawer" aria-label="Open navigation">☰</button>
+    <a class="public-brand" href="#home" aria-label="Growtica home"><span class="public-brand-mark">G</span><span>Growtica</span></a>
+    <nav class="public-desktop-nav" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#features">Features</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="public-header-actions"><button type="button" class="public-theme-toggle" id="public-theme-toggle" aria-label="Toggle color theme">◐</button><a class="public-signin" href="#signin" data-public-signin>Sign in ↗</a><a class="public-register" href="#register" data-public-register>Get started</a></div>
+  </header>
+  <button id="public-backdrop" class="public-backdrop" type="button" aria-label="Close navigation"></button>
+  <nav id="public-drawer" class="public-drawer" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="#home">Overview</a><a href="#features">Features</a>
+    <a href="#private-prayers" data-private-route="prayers">Prayer Tracker</a>
+    <a href="#private-expenses" data-private-route="expenses">Expenses</a>
+    <a href="#private-trading" data-private-route="trading">Trading Journal</a>
+    <a href="#private-news" data-private-route="news">Major News</a>
+    <a href="#private-calendar" data-private-route="calendar">Calendar &amp; Tasks</a>
+    <a href="#private-analytics" data-private-route="analytics">Analytics</a>
+    <a href="#about">About</a><a href="#contact">Contact</a><a href="#faq">FAQ</a>
+    <a class="drawer-register" href="#register" data-public-register>Create your free account</a>
+  </nav>
+  <main>
+    <section class="public-hero" id="home">
+      <div class="hero-copy">
+        <div class="public-eyebrow"><span></span> YOUR DAY. YOUR GOALS. YOUR GROWTH.</div>
+        <h1>Make every day<br><span>count with Growtica.</span></h1>
+        <p>A practical digital workspace to organize daily routines, track spending, record trading activity and follow the market stories that matter.</p>
+        <div class="hero-actions"><a class="hero-primary" href="#register" data-public-register>Create your free account <span>→</span></a><a class="hero-secondary" href="#features">Explore features</a></div>
+        <div class="hero-benefits"><span>✓ Personal workspace</span><span>✓ Market updates</span><span>✓ Simple daily tracking</span></div>
+      </div>
+      <div class="hero-preview" aria-label="Illustration of a personal progress dashboard">
+        <div class="preview-top"><strong>✦ Growtica overview</strong><span>● LIVE WORKSPACE</span></div>
+        <small>Daily progress</small><h2>Stay consistent</h2>
+        <div class="preview-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="preview-bottom"><span>◷ Track your progress</span><span>◎ Expenses</span><span>↗ Trading</span></div>
+      </div>
+    </section>
+    <section class="public-features" id="features">
+      <div class="section-heading"><span>ONE WORKSPACE, MANY POSSIBILITIES</span><h2>Everything you need to stay organized</h2><p>Bring everyday planning and personal tracking into one convenient place.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon violet">☼</span><h3>Daily routine</h3><p>Build consistent habits and keep track of your daily activities.</p></article>
+        <article class="feature-card"><span class="feature-icon green">◎</span><h3>Prayer tracker</h3><p>Record your daily prayers and review your consistency over time.</p></article>
+        <article class="feature-card"><span class="feature-icon orange">৳</span><h3>Expense tracking</h3><p>Understand spending patterns and keep your personal budget organized.</p></article>
+        <article class="feature-card"><span class="feature-icon blue">↗</span><h3>Trading journal</h3><p>Record trades, outcomes and reflections to review your process.</p></article>
+        <article class="feature-card"><span class="feature-icon pink">▤</span><h3>Major News</h3><p>Explore business, trading, forex, crypto, stock market and economy coverage.</p></article>
+        <article class="feature-card"><span class="feature-icon teal">▦</span><h3>Calendar &amp; tasks</h3><p>Organize important dates, reminders and tasks for your day.</p></article>
+        <article class="feature-card"><span class="feature-icon violet">◫</span><h3>Analytics</h3><p>Review your activity and progress with clear personal summaries.</p></article>
+      </div>
+    </section>
+    <section class="public-about" id="about"><div><span>ABOUT GROWTICA</span><h2>A clearer view of your everyday progress.</h2></div><div><p>Growtica is a web-based personal organization platform designed to bring useful everyday tools into one convenient workspace. Track routines, prayers, expenses, trading activity and tasks while keeping your information connected to your own account.</p><p>Your workspace is designed for personal organization and reflection. Market coverage is informational and does not constitute personalized investment advice or guarantee trading results.</p></div></section>
+    <section class="public-faq" id="faq"><div class="section-heading"><span>GOOD TO KNOW</span><h2>Frequently asked questions</h2></div>
+      <details><summary>Is Growtica free to use?</summary><p>You can create an account at no cost. Any future paid features or changes will be clearly communicated.</p></details>
+      <details><summary>Can I use Growtica on my phone?</summary><p>Yes. Growtica is designed to work across mobile phones, tablets and desktop browsers.</p></details>
+      <details><summary>Does Growtica provide financial or investment advice?</summary><p>No. News and trading journal tools are for information and personal record-keeping, not personalized financial advice.</p></details>
+      <details><summary>How can I contact Growtica?</summary><p>Use the contact links below to reach the Growtica team.</p></details>
+      <details><summary>Is my workspace private?</summary><p>Account data is associated with your signed-in account and protected by the application's Supabase access policies.</p></details>
+    </section>
+    <section class="public-contact" id="contact"><div><span>LET'S CONNECT</span><h2>Questions or feedback?</h2><p>Get in touch through our community channels.</p></div><div class="contact-links"><a href="https://wa.me/8801849723794" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="https://t.me/rj_traderhub" target="_blank" rel="noopener noreferrer">Telegram</a><a href="https://www.facebook.com/share/1Dx1vFdxcP/" target="_blank" rel="noopener noreferrer">Facebook</a></div></section>
+  </main>
+  <footer class="public-footer"><a class="public-brand" href="#home"><span class="public-brand-mark">G</span><span>Growtica</span></a><p>Organize your day. Understand your progress.</p><nav><a href="#about">About</a><a href="#contact">Contact</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="#faq">FAQ</a></nav><small>© <span id="public-year"></span> Growtica. All rights reserved.</small></footer>
 </div>
+<section id="auth-screen" class="auth-screen hidden" aria-live="polite">
+  <div class="auth-card" id="login-panel"><a class="back-link" href="#home" id="back-to-public">← Back to Growtica</a><div class="brand-mark">G</div><h1>Welcome back</h1><p class="muted">Sign in to continue to your Growtica workspace.</p>
+    <form id="login-form"><label>Email address<input type="email" id="login-email" required autocomplete="email"></label><label>Password<input type="password" id="login-password" required autocomplete="current-password"></label><button type="submit" class="btn primary full">Sign in</button></form>
+    <p class="auth-links"><a href="#register" data-switch-register>Create account</a><a href="forgot-password.html">Forgot password?</a></p><p id="auth-message" class="message"></p>
+  </div>
+  <div class="auth-card hidden" id="register-panel"><a class="back-link" href="#home" data-back-public>← Back to Growtica</a><div class="brand-mark">G</div><h1>Create your account</h1><p class="muted">Start building a more intentional day.</p>
+    <form id="register-form"><label>Display name<input id="reg-name" required maxlength="60" autocomplete="name"></label><label>Email address<input type="email" id="reg-email" required autocomplete="email"></label><label>Password<input type="password" id="reg-password" minlength="8" required autocomplete="new-password"></label><button type="submit" class="btn primary full">Create account</button></form>
+    <p id="register-message" class="message"></p><p class="auth-links"><a href="#signin" data-switch-signin>Already have an account? Sign in</a></p>
+  </div>
+</section>
 <div id="app" class="app-shell hidden">
   <button class="sidebar-backdrop" id="sidebar-backdrop" type="button" aria-label="Close navigation menu"></button>
   <aside class="sidebar" id="sidebar" aria-label="Main navigation">
-    <a class="brand" href="#dashboard"><span class="brand-mark">✦</span><span>Daily<span class="brand-light">Routine</span></span></a>
+    <a class="brand" href="#dashboard"><span class="brand-mark">G</span><span>Growtica</span></a>
     <div class="side-label">WORKSPACE</div>
     <nav id="side-nav">
       <a href="#dashboard" data-route="dashboard">▦ <span>Overview</span></a>
@@ -48,5 +115,5 @@
   </div>
 </div>
 <div id="toast-root" class="toast-root"></div>
-<script src="js/pwa.js"></script><script src="js/utils.js"></script><script src="js/auth.js"></script><script src="js/router.js"></script><script src="js/dashboard.js"></script><script src="js/prayers.js"></script><script src="js/expenses.js"></script><script src="js/trading.js"></script><script src="js/calendar.js"></script><script src="js/analytics.js"></script><script src="js/profile.js"></script><script src="js/settings.js"></script><script src="js/admin.js"></script><script src="js/news.js"></script><script src="js/app.js"></script>
+<script src="js/public.js"></script><script src="js/auth-pages.js"></script><script src="js/pwa.js"></script><script src="js/utils.js"></script><script src="js/auth.js"></script><script src="js/router.js"></script><script src="js/dashboard.js"></script><script src="js/prayers.js"></script><script src="js/expenses.js"></script><script src="js/trading.js"></script><script src="js/calendar.js"></script><script src="js/analytics.js"></script><script src="js/profile.js"></script><script src="js/settings.js"></script><script src="js/admin.js"></script><script src="js/news.js"></script><script src="js/app.js"></script>
 </body></html>
