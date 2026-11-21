@@ -1,0 +1,23 @@
+<section class="welcome-row growtica-welcome">
+  <div class="welcome-copy">
+    <div class="eyebrow">YOUR PERSONAL OVERVIEW</div>
+    <h1>Good morning, <span id="dashboard-user-name">there</span><span class="accent">.</span></h1>
+    <p>A clear, encouraging view of your progress today.</p>
+    <div class="welcome-meta"><span id="dash-date"></span><i></i><span>Your progress, at a glance</span></div>
+  </div>
+  <div class="growth-score" aria-live="polite">
+    <div class="score-ring" id="growth-score-ring"><div><strong id="growth-score-value">—</strong><span>GROWTH SCORE</span></div></div>
+    <small id="growth-score-detail">Based on 0 tracked areas</small>
+  </div>
+</section>
+<div class="filter-row dashboard-filter">
+  <label>Performance period
+    <select id="dash-period"><option value="day">Day</option><option value="month" selected>Month</option><option value="year">Year</option></select>
+  </label>
+  <label id="dash-date-label">Select month<input type="month" id="dash-month"></label>
+  <button class="btn subtle" id="refresh-dashboard" type="button">↻ Refresh</button>
+</div>
+<div id="monthly-stats" class="stats-grid"></div>
+<div class="grid-two"><article class="panel"><div class="panel-head"><div><h3>Monthly activity</h3><p class="muted">Prayer completion and personal tasks</p></div></div><div id="activity-chart" class="bar-chart"></div></article><article class="panel"><div class="panel-head"><div><h3>Trading snapshot</h3><p class="muted">Realized result for selected period</p></div><a href="#trading">View journal →</a></div><div id="trade-snapshot" class="snapshot"></div></article></div>
+<div class="grid-two"><article class="panel"><div class="panel-head"><h3>Today’s prayers</h3><a href="#prayers">Update →</a></div><div id="today-prayers" class="prayer-mini"></div></article><article class="panel"><div class="panel-head"><h3>Today’s tasks</h3><a href="#calendar">Open calendar →</a></div><div id="today-tasks"></div></article></div>
+<div class="quote-card"><span>✦ DAILY REMINDER</span><p id="daily-quote">Consistency is built one small decision at a time.</p></div>
