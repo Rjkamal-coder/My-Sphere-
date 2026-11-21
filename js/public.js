@@ -1,0 +1,22 @@
+(() => {
+ const body=document.body, menu=document.getElementById("public-menu-btn"), drawer=document.getElementById("public-drawer"), backdrop=document.getElementById("public-backdrop");
+ const close=()=>{body.classList.remove("public-menu-open");menu?.setAttribute("aria-expanded","false");drawer?.setAttribute("aria-hidden","true");menu?.setAttribute("aria-label","Open navigation");};
+ const open=()=>{body.classList.add("public-menu-open");menu?.setAttribute("aria-expanded","true");drawer?.setAttribute("aria-hidden","false");menu?.setAttribute("aria-label","Close navigation");};
+ menu?.addEventListener("click",()=>body.classList.contains("public-menu-open")?close():open());backdrop?.addEventListener("click",close);
+ drawer?.addEventListener("click",e=>{const link=e.target.closest("a");if(!link)return;close();if(link.dataset.privateRoute){e.preventDefault();showSignIn(link.dataset.privateRoute);}});
+ document.addEventListener("keydown",e=>{if(e.key==="Escape")close();});
+ document.addEventListener("click",e=>{if(body.classList.contains("public-menu-open")&&!drawer?.contains(e.target)&&!menu?.contains(e.target))close();});
+ window.addEventListener("resize",()=>{if(innerWidth>760)close();});
+ const setAuthMode=(mode)=>{close();const home=document.getElementById("public-home"),auth=document.getElementById("auth-screen");home?.classList.toggle("auth-mode",mode!=="home");auth?.classList.toggle("hidden",mode==="home");document.getElementById("login-panel")?.classList.toggle("hidden",mode!=="signin");document.getElementById("register-panel")?.classList.toggle("hidden",mode!=="register");if(mode!=="home"){history.replaceState(null,"",location.pathname+location.search+(mode==="register"?"#register":"#signin"));window.scrollTo({top:0,behavior:"instant"});requestAnimationFrame(()=>document.querySelector(mode==="register"?"#reg-name":"#login-email")?.focus({preventScroll:true}));}};
+ window.showSignIn=function(route){if(route)sessionStorage.setItem("growtica-next-route",route);setAuthMode("signin");};
+ window.showRegister=function(){setAuthMode("register");};
+ window.showPublicHome=function(){setAuthMode("home");};
+ document.querySelectorAll("[data-public-signin]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();showSignIn();}));
+ document.querySelectorAll("[data-public-register], [data-switch-register]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();showRegister();}));
+ document.querySelectorAll("[data-switch-signin]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();showSignIn();}));
+ document.querySelectorAll("[data-back-public]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();showPublicHome();}));
+ document.getElementById("back-to-public")?.addEventListener("click",e=>{e.preventDefault();showPublicHome();});
+ document.getElementById("public-theme-toggle")?.addEventListener("click",()=>window.toggleTheme?.());
+ document.getElementById("public-year")?.replaceChildren(String(new Date().getFullYear()));
+ if(location.hash==="#register")showRegister();else if(location.hash==="#signin")showSignIn();
+})();
